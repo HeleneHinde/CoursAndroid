@@ -3,6 +3,8 @@ package com.example.mod3lib
 var hello = "bonjour"
 
 /*
+
+// les basics
 fun main(){
     hello = "hello"
     println(hello)
@@ -33,6 +35,8 @@ fun main(){
 
 }*/
 
+/*
+//les structures de controle
 fun main(){
 
     //if
@@ -79,5 +83,54 @@ fun main(){
 
     }
 
+
+}*/
+
+//Fonctions, extension, elvis, prédicat (expresson fléchée)
+
+fun main() {
+    //extension : rajouter une méthode à une classe en dehors de la classe
+
+    fun String.sayHello() {
+        println("Hello $this")
+
+    }
+
+    "Camille".sayHello();
+
+    fun Int.multiply(number: Int): Int {
+        return this * number
+    }
+    println(12.multiply(5))
+
+    //Elvis
+
+    var name : String? = null
+
+    val taille = name?.length?:"toto"
+
+    println(taille)
+
+    //List
+
+    val colors = mutableListOf<String>("jaune")
+    colors.add("violet")
+    colors.add("vert")
+
+    println(colors.toString())
+
+    //list qui ne peux changer (on ne peut pas faire de add
+    val colors2 = listOf<String>("rose", "cornflowerblue", "chartreuse")
+
+    //la fonction .plus ajoute à la liste un élément et renvoi une nouvelle liste
+    val colors3 = colors2.plus("rouge")
+
+    println(colors2 + colors3)
+
+    //truc = truc2
+    val truc = colors3.filter { it.length>4 }.forEach {println(it)}
+    val truc2 = colors3.filter { color->color.length>4 }.forEach { michel ->println(michel)}
+
+    println(colors3.filter { it.length>4 }.count())
 
 }
