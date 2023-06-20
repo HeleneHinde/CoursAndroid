@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">mod2ihmsimple</string>
+    <string name="formulaire">Formulaire</string>
+    <string name="nom">Nom</string>
+    <string name="age">Age</string>
+    <string name="enregistrer">Enregistrer</string>
+</resources>

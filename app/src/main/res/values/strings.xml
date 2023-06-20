@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">CoursAndroid</string>
+    <string name="coucou">Coucou</string>
+    <string name="recoucou">ReCoucou</string>
+    <string name="Hello">Hello World</string>
+</resources>

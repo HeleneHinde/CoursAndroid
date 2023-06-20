@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CoursAndroid en français</string>
+    <string name="coucou">Coucou en français</string>
+    <string name="recoucou">ReCoucou en français</string>
+    <string name="Hello">Coucou Le Monde</string>
+</resources>
