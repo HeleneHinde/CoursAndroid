@@ -16,3 +16,5 @@ rootProject.name = "CoursAndroid"
 include ':app'
 include ':mod2ihmsimple'
 include ':mod3lib'
+include ':mod4findview'
+include ':tprandom'
