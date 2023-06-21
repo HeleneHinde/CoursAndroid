@@ -27,30 +27,28 @@ class MainActivity : AppCompatActivity() {
 
         var i = 0
         var y = questions.size
+        var score = 0
 
         println(y)
 
         binding.question = questions[i]
+        binding.tvScore.text = score.toString()
 
         binding.btnVrai.setOnClickListener {
 
             if (questions[i].reponse == true) {
 
-                if (i < y - 1) {
-                    binding.question = questions[i + 1]
-                    i++
-                } else {
+                score++
+                binding.tvScore.text = score.toString()
 
-                    i = 0
-                    binding.question = questions[i]
-                }
-
+            }
+            if (i < y - 1) {
+                binding.question = questions[i + 1]
+                i++
             } else {
-                Toast.makeText(
-                    this,
-                    "Essaye encore !",
-                    Toast.LENGTH_LONG
-                ).show()
+
+                i = 0
+                binding.question = questions[i]
             }
 
 
@@ -60,21 +58,17 @@ class MainActivity : AppCompatActivity() {
 
             if (questions[i].reponse == false) {
 
-                if (i < y - 1) {
-                    binding.question = questions[i + 1]
-                    i++
-                } else {
+                score++
+                binding.tvScore.text = score.toString()
 
-                    i = 0
-                    binding.question = questions[i]
-                }
-
+            }
+            if (i < y - 1) {
+                binding.question = questions[i + 1]
+                i++
             } else {
-                Toast.makeText(
-                    this,
-                    "Essaye encore !",
-                    Toast.LENGTH_LONG
-                ).show()
+
+                i = 0
+                binding.question = questions[i]
             }
 
         }
@@ -82,6 +76,8 @@ class MainActivity : AppCompatActivity() {
         binding.btnReset.setOnClickListener {
             i = 0
             binding.question = questions[i]
+            score=0
+            binding.tvScore.text = score.toString()
         }
 
 
