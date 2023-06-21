@@ -13,8 +13,10 @@
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/mod2ihmsimple" />
             <option value="$PROJECT_DIR$/mod3lib" />
+            <option value="$PROJECT_DIR$/mod4databinding" />
             <option value="$PROJECT_DIR$/mod4findview" />
             <option value="$PROJECT_DIR$/tprandom" />
+            <option value="$PROJECT_DIR$/tpvraifaux" />
           </set>
         </option>
       </GradleProjectSettings>
