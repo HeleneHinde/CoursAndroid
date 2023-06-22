@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/buttonFragment">
+
+    <fragment
+        android:id="@+id/buttonFragment"
+        android:name="com.example.mod5navinterne.ButtonFragment"
+        android:label="fragment_button"
+        tools:layout="@layout/fragment_button" >
+        <action
+            android:id="@+id/action_button_toEnd"
+            app:destination="@id/endFragment"
+            app:enterAnim="@android:anim/slide_in_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/endFragment"
+        android:name="com.example.mod5navinterne.EndFragment"
+        android:label="fragment_end"
+        tools:layout="@layout/fragment_end" />
+</navigation>

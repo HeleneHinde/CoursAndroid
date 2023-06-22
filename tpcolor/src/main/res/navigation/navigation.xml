@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/firstButtonFragment">
+
+    <fragment
+        android:id="@+id/firstButtonFragment"
+        android:name="com.example.tpcolor.FirstButtonFragment"
+        android:label="fragment_first_button"
+        tools:layout="@layout/fragment_first_button" >
+        <action
+            android:id="@+id/action_firstButtonFragment_to_longButtonFragment"
+            app:destination="@id/longButtonFragment" />
+        <action
+            android:id="@+id/action_firstButtonFragment_to_shortButtonFragment"
+            app:destination="@id/shortButtonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/longButtonFragment"
+        android:name="com.example.tpcolor.LongButtonFragment"
+        android:label="fragment_long_button"
+        tools:layout="@layout/fragment_long_button" >
+        <action
+            android:id="@+id/action_longButtonFragment_to_longButtonBlueFragment"
+            app:destination="@id/longButtonBlueFragment" />
+        <action
+            android:id="@+id/action_longButtonFragment_to_longButtonYellowFragment"
+            app:destination="@id/longButtonYellowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/shortButtonFragment"
+        android:name="com.example.tpcolor.ShortButtonFragment"
+        android:label="fragment_short_button"
+        tools:layout="@layout/fragment_short_button" >
+        <action
+            android:id="@+id/action_shortButtonFragment_to_shortButtonGreenFragment"
+            app:destination="@id/shortButtonGreenFragment" />
+        <action
+            android:id="@+id/action_shortButtonFragment_to_shortButtonRedFragment"
+            app:destination="@id/shortButtonRedFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/longButtonBlueFragment"
+        android:name="com.example.tpcolor.LongButtonBlueFragment"
+        android:label="fragment_long_button_blue"
+        tools:layout="@layout/fragment_long_button_blue" />
+    <fragment
+        android:id="@+id/longButtonYellowFragment"
+        android:name="com.example.tpcolor.LongButtonYellowFragment"
+        android:label="fragment_long_button_yellow"
+        tools:layout="@layout/fragment_long_button_yellow" />
+    <fragment
+        android:id="@+id/shortButtonGreenFragment"
+        android:name="com.example.tpcolor.ShortButtonGreenFragment"
+        android:label="fragment_short_button_green"
+        tools:layout="@layout/fragment_short_button_green" />
+    <fragment
+        android:id="@+id/shortButtonRedFragment"
+        android:name="com.example.tpcolor.ShortButtonRedFragment"
+        android:label="fragment_short_button_red"
+        tools:layout="@layout/fragment_short_button_red" />
+</navigation>
