@@ -19,5 +19,9 @@
         android:id="@+id/endFragment"
         android:name="com.example.mod5navinterne.EndFragment"
         android:label="fragment_end"
-        tools:layout="@layout/fragment_end" />
+        tools:layout="@layout/fragment_end" >
+        <argument
+            android:name="user"
+            app:argType="com.example.mod5navinterne.User" />
+    </fragment>
 </navigation>

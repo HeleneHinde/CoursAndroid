@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace 'com.example.mod5navinterne'
+    namespace 'com.example.tphistoire'
     compileSdk 33
 
     buildFeatures {
@@ -14,7 +14,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.mod5navinterne"
+        applicationId "com.example.tphistoire"
         minSdk 24
         targetSdk 33
         versionCode 1

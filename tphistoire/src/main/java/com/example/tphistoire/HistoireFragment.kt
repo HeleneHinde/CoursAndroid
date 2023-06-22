@@ -1,4 +1,4 @@
-package com.example.mod5navinterne
+package com.example.tphistoire
 
 import android.os.Bundle
 import android.util.Log
@@ -9,26 +9,22 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.navigation.fragment.navArgs
 
-private const val TAG = "EndFragment"
+class HistoireFragment : Fragment() {
 
-class EndFragment : Fragment() {
+    val args : HistoireFragmentArgs by navArgs()
 
-
-    val args : EndFragmentArgs by navArgs()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_end, container, false)
+        return inflater.inflate(R.layout.fragment_histoire, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<TextView>(R.id.tv_endfragment).text = args.user.toString()
-        Log.i(TAG, "onViewCreated: " + args.user)
+        view.findViewById<TextView>(R.id.tv_histoire).text = "`Il était une fois, un être nommé "+ args.histoire.prenom + " qui vivait dans "+ args.histoire.lieu
     }
-
 
 }
