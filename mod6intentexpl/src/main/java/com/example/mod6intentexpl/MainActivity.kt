@@ -15,10 +15,13 @@ class MainActivity : AppCompatActivity() {
 
         button.setOnClickListener {
 /*            val intent = Intent(this, LoginActivity::class.java)
+                intent.putExtra("pseudo", "camille")
             startActivity(intent)*/
 
             //autre écriture avec le .also
             Intent(this, LoginActivity::class.java).also {
+                //Envoi des arguments vers LoginActivity.kt
+                it.putExtra("pseudo", "camille")
                 startActivity(it)
             }
         }

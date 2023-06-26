@@ -24,8 +24,13 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
+        //récupération des arguments envoyé depuis le maintActivity
+        val pseudo = intent.getStringExtra("pseudo")
+
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.username.setText(pseudo)
 
         val username = binding.username
         val password = binding.password
