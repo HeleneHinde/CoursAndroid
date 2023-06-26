@@ -28,3 +28,6 @@ include ':mod5demomenu'
 include ':mod6intentexpl'
 include ':mod6intentimpliite'
 include ':tpnemoubliepas'
+include ':mod7lifecycle'
+include ':mod8viewmodel'
+
