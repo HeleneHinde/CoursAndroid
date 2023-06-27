@@ -32,3 +32,4 @@ include ':mod7lifecycle'
 include ':mod8viewmodel'
 
 include ':tplancede'
+include ':mod9ormroom'

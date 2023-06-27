@@ -17,14 +17,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
-        var image = findViewById<ImageView>(R.id.imageView)
+
         vm = ViewModelProvider(this)[LancedeViewModel::class.java]
 
         binding.vm=vm
 
         //action effectué quand les données changent
         vm.totalLance.observe(this) {
+
             binding.vm = vm
+
         }
 
         binding.btJ1.setOnClickListener {
