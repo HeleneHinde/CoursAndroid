@@ -1,20 +1,22 @@
 package com.example.mod8viewmodel
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class CounterViewModel : ViewModel() {
 
 
-    private var counter : Int = 0
+    var counter : MutableLiveData<Int> = MutableLiveData<Int>(0)
 
-    fun increment():Int{
-        return ++counter
+    fun increment() {
+        counter.value=counter.value?.inc()
+
     }
 
-    fun getCounter():Int{
+/*    fun getCounter(): Int? {
 
-        return counter
-    }
+        return counter.value
+    }*/
 
 
 

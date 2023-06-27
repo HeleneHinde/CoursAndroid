@@ -22,12 +22,14 @@ class MainActivity : AppCompatActivity() {
 
         binding.vm=vm
 
+        //action effectué quand les données changent
+        vm.totalLance.observe(this) {
+            binding.vm = vm
+        }
 
         binding.btJ1.setOnClickListener {
 
             vm.setLance1()
-
-            binding.vm=vm
 
         }
 
@@ -35,14 +37,12 @@ class MainActivity : AppCompatActivity() {
 
             vm.setLance2()
 
-            binding.vm=vm
-
         }
 
         binding.btReset.setOnClickListener {
 
             vm.reset()
-            binding.vm=vm
+
          }
 
 

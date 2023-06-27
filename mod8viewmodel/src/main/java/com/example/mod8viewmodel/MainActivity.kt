@@ -23,10 +23,16 @@ class MainActivity : AppCompatActivity() {
 
         binding.vm = vm
 
+
+        //action effectué quand les données changent
+        vm.counter.observe(this) {
+            binding.vm = vm
+        }
+
         binding.button.setOnClickListener {
 
             vm.increment()
-            binding.vm = vm
+/*            binding.vm = vm*/
 
         }
         Log.i(TAG, "onCreate: ")

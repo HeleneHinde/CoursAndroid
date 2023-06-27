@@ -2,6 +2,7 @@ package com.example.tplancede
 
 
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import kotlin.random.Random
 
@@ -20,6 +21,8 @@ class LancedeViewModel : ViewModel(){
     private var lance:Int=0
 
     private var idImage:Int=R.drawable.ic_launcher_foreground
+
+    var totalLance = MutableLiveData<Int>(0)
 
 
     fun getImageDrawable() {
@@ -44,6 +47,7 @@ class LancedeViewModel : ViewModel(){
         score2=0
         nblance1=0
         nblance2=0
+        totalLance.value=0
 
     }
 
@@ -57,6 +61,7 @@ class LancedeViewModel : ViewModel(){
     }
 
     fun setLance1():Int{
+        totalLance.value=totalLance.value?.inc()
         lance= Random.nextInt(1 , 7)
         getImageDrawable()
         majScore1(lance)
@@ -65,6 +70,7 @@ class LancedeViewModel : ViewModel(){
     }
 
     fun setLance2():Int{
+        totalLance.value=totalLance.value?.inc()
         lance= Random.nextInt(1 , 7)
         getImageDrawable()
         majScore2(lance)
