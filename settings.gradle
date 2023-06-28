@@ -33,3 +33,4 @@ include ':mod8viewmodel'
 
 include ':tplancede'
 include ':mod9ormroom'
+include ':tpqualiteair'

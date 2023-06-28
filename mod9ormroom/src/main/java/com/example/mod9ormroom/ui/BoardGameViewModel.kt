@@ -14,7 +14,7 @@ class BoardGameViewModel(private val boardGameDAO: BoardGameDAO) : ViewModel() {
     var boardGame = MutableLiveData<BoardGame>(null)
 
     fun addGame(boardGame:BoardGame):MutableLiveData<Long>{
-        var id = MutableLiveData<Long>()
+        val id = MutableLiveData<Long>()
         viewModelScope.launch {
             id.value=boardGameDAO.insert(boardGame)
         }
@@ -38,7 +38,7 @@ class BoardGameViewModel(private val boardGameDAO: BoardGameDAO) : ViewModel() {
                 // Get the Application object from extras
                 val application = checkNotNull(extras[APPLICATION_KEY])
 
-                //Instanciation du ViewModel en prenant en compte l'ajut de la DAO dans le constructeur
+                //Instanciation du ViewModel en prenant en compte l'ajout de la DAO dans le constructeur
                 return BoardGameViewModel(
                     (AppDataBase.getInstance(application.applicationContext)).getBoardGameDAO()
                 ) as T
