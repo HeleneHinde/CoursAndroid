@@ -1,6 +1,7 @@
 package com.example.tpqualiteair.ui
 
 import android.text.Spannable.Factory
+import android.util.Log
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -14,7 +15,7 @@ import kotlinx.coroutines.launch
 
 class VilleViewModel (private val villeDAO: VilleDAO):ViewModel(){
 
-    var villes = MutableLiveData<List<Ville>>(null)
+    var villes = MutableLiveData<List<Ville>>()
 
 
     fun addVille(ville: Ville):MutableLiveData<Long>{
@@ -27,11 +28,14 @@ class VilleViewModel (private val villeDAO: VilleDAO):ViewModel(){
     }
 
     fun getAll(){
+
         viewModelScope.launch {
 
            villes.value=villeDAO.getAll()
+            Log.i("testAll", "getAll: "+villes.value.toString())
 
         }
+
     }
 
 
