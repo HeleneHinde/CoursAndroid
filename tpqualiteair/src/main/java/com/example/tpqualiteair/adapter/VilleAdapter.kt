@@ -2,12 +2,12 @@ package com.example.tpqualiteair.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView.Adapter
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.tpqualiteair.bo.Ville
 import com.example.tpqualiteair.databinding.TemplateVilleLineBinding
 
-class VilleAdapter(val listVille : List<Ville>): RecyclerView.Adapter<VilleAdapter.VilleVH>() {
+class VilleAdapter(val listVille : List<Ville>): Adapter<VilleAdapter.VilleVH>() {
 
     class VilleVH(val binding : TemplateVilleLineBinding):ViewHolder(binding.root)
 
@@ -22,6 +22,9 @@ class VilleAdapter(val listVille : List<Ville>): RecyclerView.Adapter<VilleAdapt
 
     override fun onBindViewHolder(holder: VilleVH, position: Int) {
         holder.binding.ville=listVille[position]
+
+
+
     }
 
 }
